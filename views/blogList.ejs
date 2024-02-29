@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        /* Your existing styles */
+    </style>
+</head>
+<body>
+    <header>
+        <h1><%= title %></h1>
+        <nav>
+            <ul>
+                <li><a href="/" class="menu-button">Home</a></li>
+                <li><a href="/add" class="menu-button">Add Blog</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if (blogs.length > 0) { %>
+            <ul>
+                <% blogs.forEach(function(blog) { %>
+                    <li>
+                        <h2><%= blog.title %></h2>
+                        <p><%= blog.content %></p>
+                        <a href="/edit/<%= blog._id %>">Edit</a> | 
+                        <a href="/delete/<%= blog._id %>" onclick="return confirm('Are you sure you want to delete this blog?');">Delete</a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No blogs found.</p>
+        <% } %>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>
