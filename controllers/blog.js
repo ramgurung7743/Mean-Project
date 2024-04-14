@@ -1,30 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const Blog = require('../models/blog'); // Adjust the path to your Blog model
+const Blog = require('../models/blog'); 
 
-// Updated /list route to fetch blogs from the database
-router.get('/list', async (req, res) => {
+router.get('/blogList', async (req, res) => {
   try {
-    const blogs = await Blog.find();
-    res.render('blogList', { title: 'Blog List', blogs });
+    const blogs = await Blog.find().sort({ modifiedDate: -1 }); 
+    res.render('blogList', { blogs: blogs });
   } catch (error) {
-    console.error('Error fetching blogs:', error);
-    res.render('error', { error }); // Assuming you have an error.ejs view
+    console.error(error);
+    res.status(500).render('error', { error: error });
   }
 });
 
-
-// Keep the /add route as is to serve the form for adding a blog
 router.get('/add', (req, res) => {
   res.render('blogAdd', { title: 'Add Blog' });
 });
 
-// Add here the route to handle POST request for adding a blog
-// This assumes you have a form in blogAdd.ejs that sends a POST request to /add
 router.post('/add', async (req, res) => {
   const { title, content } = req.body;
 
-  if (!title || !content) { // Basic validation
+  if (!title || !content) {
     return res.status(400).render('error', { error: { message: 'Title and content are required.' } });
   }
 

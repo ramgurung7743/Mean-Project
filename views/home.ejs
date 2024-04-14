@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/styles/main.css"> <!-- Placeholder for external CSS file -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage - Ram Gurung Blog Pages</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blogList">List Blogs</a></li>
-                <li><a href="/blogAdd">Add Blog</a></li>
-                <!-- Ensure these paths match your Express routes -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1><%= title %></h1>
-        <p>Welcome to <%= title %>! This is where you will see my Blog updates...</p>
-        <!-- Consider adding more content or features here -->
-    </main>
-    <footer>
-        <!-- Footer content can go here -->
-    </footer>
+  <header>
+    <nav>
+      <a href="/" class="nav-item active">My Blog</a>
+      <a href="/blogList" class="nav-item">List Blogs</a>
+      <a href="/blogAdd" class="nav-item">Add Blog</a>
+    </nav>
+  </header>
+  <main class="homepage-container">
+    <div class="homepage-content">
+      <h1>Ram Gurung Blog Pages</h1>
+      <p>This is where you will find all my blogs</p>
+      <button id="viewBlogs">View Blogs</button>
+    </div>
+  </main>
 </body>
 </html>

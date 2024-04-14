@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/styles.css"> <!-- Assuming you have a CSS file -->
-    <style>
-        /* Your existing styles */
-        /* You can also move these to an external stylesheet */
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Blog Post</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-    <header>
-        <h1><%= title %></h1>
-        <nav>
-            <ul>
-                <li><a href="/" class="menu-button">Home</a></li>
-                <li><a href="/list" class="menu-button">Blog List</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form action="/add" method="POST"> <!-- Adjust the action URL as necessary -->
-            <div>
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-            </div>
-            <div>
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" rows="4" required></textarea>
-            </div>
-            <button type="submit">Add Blog Post</button>
-        </form>
-    </main>
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
+  <header>
+    <nav>
+      <a href="/" class="nav-item">My Blog</a>
+      <a href="/blogList" class="nav-item">List Blogs</a>
+      <a href="/blogAdd" class="nav-item active">Add Blog</a>
+    </nav>
+  </header>
+  <main>
+    <div class="form-container">
+      <h2>Add Your Blogs Here</h2>
+      <form id="addBlogForm" action="/blogAdd" method="POST">
+        <label for="blogTitle">Blog Title:</label>
+        <input type="text" id="blogTitle" name="blogTitle" required>
+        
+        <label for="blogText">Blog Content:</label>
+        <textarea id="blogText" name="blogText" required></textarea>
+        
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+        
+        <label for="authorEmail">Author Email:</label>
+        <input type="email" id="authorEmail" name="authorEmail" required>
+        
+        <button type="submit">Add Blog</button>
+      </form>         
+    </div>
+  </main>
 </body>
 </html>
