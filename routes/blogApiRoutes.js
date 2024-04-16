@@ -50,23 +50,25 @@ router.post('/blogAdd', async (req, res) => {
 });
 
 // Update a blog post
-router.post('/blogAdd', async (req, res) => {
-    const { title, content } = req.body; // Assuming these are the names of your form fields
+router.put('/blogs/:id', async (req, res) => {
+    const { blogTitle, blogText, author, authorEmail } = req.body;
 
-    if (!title || !content) {
-        res.status(400).render('error', { error: 'Title and content are required' });
-        return;
+    if (!blogTitle || !blogText || !author || !authorEmail) {
+        return res.status(400).json({ error: 'Title, content, author, and author email are required' });
     }
 
     try {
-        const newBlog = new Blog({ title, content });
-        await newBlog.save();
-        res.redirect('/blogList'); // Redirect to the blog list after successful save
+        const blog = await Blog.findByIdAndUpdate(req.params.id, { blogTitle, blogText, author, authorEmail }, { new: true });
+        if (!blog) {
+            return res.status(404).json({ error: "Blog not found" });
+        }
+        res.json(blog);
     } catch (error) {
-        console.error('Error adding new blog:', error);
-        res.status(500).render('error', { error: 'Failed to add new blog' });
+        console.error('Error updating blog:', error);
+        res.status(500).json({ error: 'Failed to update blog' });
     }
 });
+
 
 
 // Delete a blog post

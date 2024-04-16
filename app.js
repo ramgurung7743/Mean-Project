@@ -27,22 +27,28 @@ mongoose.connect(`mongodb://userRam:${encodedPassword}@localhost:27017/admin`)
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
-// View engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.static(path.join(__dirname, 'app_client')));
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
+});
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Import routes
 const indexRouter = require('./routes/index');
-const blogApiRoutes = require('./routes/blogApiRoutes'); // Adjust the path as necessary
-const blogViewRoutes = require('./routes/blogViewRoutes'); // Adjust the path as necessary
-const blogRouter = require('./controllers/blog'); // Adjust the path as necessary
+const blogApiRoutes = require('./routes/blogApiRoutes'); 
+const blogViewRoutes = require('./routes/blogViewRoutes');
+const blogRouter = require('./controllers/blog');
 
 // Use routes
 app.use('/', indexRouter);
