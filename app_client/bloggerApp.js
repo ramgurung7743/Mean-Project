@@ -22,8 +22,19 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 controller: 'AddController',
                 controllerAs: 'vm'
             })
-            // ... other states ...
-            ;
+            .state('blogEdit', {
+                url: '/blogEdit',
+                templateUrl: '/blogEdit.html',
+                controller: 'EditController',
+                controllerAs: 'vm'
+            })
+            .state('blogDelete', {
+                url: '/blogDelete',
+                templateUrl: '/blogDelete.html',
+                controller: 'DeleteController',
+                controllerAs: 'vm'
+            })
+            ;            ;
 
         $urlRouterProvider.otherwise('/');
 
@@ -107,48 +118,33 @@ function ListController(BlogService, authentication) {
 }]);
 
 // Controller for editing blogs
-app.controller('EditController', ['$stateParams', '$location', 'BlogService', 'authentication',
-  function EditController($stateParams, $location, BlogService, authentication) {
+app.controller('EditController', ['$stateParams', '$location', 'BlogService', 
+  function EditController($stateParams, $location, BlogService) {
       var vm = this;
-      var blogId = $stateParams.blogid;
       vm.blog = {};
-      vm.title = 'Edit Blog';
-
-      BlogService.getBlog(blogId).then(function (response) {
-          vm.blog = response.data;
-      }, function (error) {
-          console.error('Error fetching blog:', error);
-      });
-
+      
       vm.editBlog = function () {
-          BlogService.updateBlog(blogId, vm.blog).then(function (response) {
+          BlogService.updateBlog(vm.blog._id, vm.blog).then(function (response) {
               $location.path('/blogList');
           }, function (error) {
-              vm.message = 'Error updating blog ' + vm.blogId;
+              vm.message = 'Error updating blog: ' + error.message;
           });
       };
-  }]);
+  }
+]);
 
 // Controller for deleting blogs
-app.controller('DeleteController', ['$stateParams', '$location', 'BlogService', 'authentication',
-  function DeleteController($stateParams, $location, BlogService, authentication) {
+app.controller('DeleteController', ['$stateParams', '$location', 'BlogService', 
+  function DeleteController($stateParams, $location, BlogService) {
       var vm = this;
       vm.blog = {};
-      var blogId = $stateParams.blogid;
-      vm.title = 'Delete Blog';
-
-      BlogService.getBlog(blogId).then(function (response) {
-          vm.blog = response.data;
-          vm.message = "Blog found";
-      }, function (error) {
-          vm.message = 'Error fetching blog' + vm.blogId + 'for deletion';
-      });
-
+      
       vm.deleteBlog = function () {
-          BlogService.deleteBlog(blogId).then(function (response) {
+          BlogService.deleteBlog(vm.blog._id).then(function (response) {
               $location.path('/blogList');
           }, function (error) {
-              vm.message = 'Error deleting blog ' + vm.blogId;
+              vm.message = 'Error deleting blog: ' + error.message;
           });
       };
-  }]);
+  }
+]);
