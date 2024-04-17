@@ -17,19 +17,74 @@
     <script src="bloggerApp.js"></script>
 </head>
 
-<body>
-    <nav class="navigation">
-        <a ng-href="#!/home" class="nav-item">My Blog</a>
-        <a ng-href="#!/blogList" class="nav-item">List Blogs</a>
-        <a ng-href="#!/blogAdd" class="nav-item">Add Blog</a>
-    </nav>
-    
-    <div ui-view></div>
+ <!-- Navigation -->
+<body ng-controller="NavigationController as vm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" ng-class="{ active: isActive('/') }">
+            <a class="nav-item" href="#!/home">My Blog</a>
+        </li>
+        <li class="nav-item" ng-class="{ active: isActive('/blogList') }">
+            <a class="nav-item" href="#!/blogList">List Blogs</a>
+        </li>
+        <!-- Show this link only if user is not logged in -->
+        <li class="nav-item" ng-if="!isLoggedIn()" ng-class="{ active: isActive('/login') }">
+            <a class="nav-item" href="#!/login">Sign In</a>
+        </li>
+        <!-- Show "Add Blog" and "Logout" only if user is logged in -->
+        <li class="nav-item" ng-if="isLoggedIn()" ng-class="{ active: isActive('/blogAdd') }">
+            <a class="nav-item" href="#!/blogAdd">Add Blog</a>
+        </li>
+        <li class="nav-item" ng-if="isLoggedIn()">
+            <a class="nav-item" href="" ng-click="logout()">Logout ({{currentUser().email}})</a>
+        </li>
+    </ul>
+</nav>
+
 
 <!-- home.html -->
 <div class="container mt-5" ng-controller="HomeController as vm">
   <h1>{{ vm.title }}</h1>
   <p>{{ vm.message }}</p>
+</div>
+
+  <!-- Login Form -->
+  <div class="container" ng-controller="LoginController as loginCtrl">
+      <h2>Login</h2>
+      <p>Not a member? Please <a ui-sref="register">Register</a> first.</p>
+      <form name="loginForm" ng-submit="loginCtrl.login()">
+          <div class="form-group">
+            <label for="email" style="margin-right: 23px;">Email:</label>
+            <input type="email" class="form-control" id="email" ng-model="loginCtrl.credentials.email" required>
+          </div>
+          <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" ng-model="loginCtrl.credentials.password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+
+  
+  <!-- Register.html -->
+  <div class="container">
+    <h2>Register</h2>
+    <p>Already a member? Please <a ui-sref="login">Log in</a> instead.</p>
+    <form name="registrationForm" ng-submit="registerCtrl.register()">
+        <div class="form-group">
+            <label for="fullName" style="margin-right: 50px;"></label>Full Name:</label>
+            <input type="text" class="form-control" id="fullName" ng-model="registerCtrl.user.fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="email" style="margin-right: 76px;"></label>Email:</label>
+            <input type="email" class="form-control" id="email" ng-model="registerCtrl.user.email" required>
+        </div>
+        <div class="form-group">
+            <label for="password" style="margin-right: 52px;"></label>Password:</label>
+            <input type="password" class="form-control" id="password" ng-model="registerCtrl.user.password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-right: 2px;">Register!</button>
+    </form>
 </div>
 
 <!-- blogList.html -->
@@ -95,6 +150,7 @@
 </div>
 
     <!-- Common JavaScripts -->
+    <script src="bloggerApp.js"></script>
     <script src="common/nav/navigation.js"></script>
     <script src="common/auth/authentication.js"></script>
     <!-- Bootstrap JavaScript is included here, but as noted above, consider if you need it or not. -->

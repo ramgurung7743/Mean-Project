@@ -5,7 +5,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '/home',
                 templateUrl: '/home.html',
                 controller: 'HomeController',
                 controllerAs: 'vm'
@@ -34,9 +34,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 controller: 'DeleteController',
                 controllerAs: 'vm'
             })
-            ;            ;
+            .state('login', {
+                url: '/login',
+                templateUrl: '/login.html',
+                controller: 'LoginController',
+                controllerAs: 'loginCtrl'
+            })
+            .state('register', {
+                url: '/register',
+                templateUrl: '/register.html',
+                controller: 'RegisterController',
+                controllerAs: 'registerCtrl'
+            })
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
 
         $locationProvider.html5Mode({
             enabled: true,
@@ -70,11 +81,19 @@ app.service('BlogService', ['$http', function ($http) {
   };
 }]);
 
-app.controller('NavigationController', ['$scope', '$location', function($scope, $location) {
-  $scope.isActive = function(path) {
-    return $location.path() === path;
-  };
+app.controller('NavigationController', ['$scope', 'authentication', function($scope, authentication) {
+    $scope.isLoggedIn = authentication.isLoggedIn;
+    $scope.currentUser = authentication.currentUser;
+    $scope.isActive = function(path) {
+        return $location.path() === path;
+    };
+    $scope.logout = function() {
+        authentication.logout(); 
+        $location.path('/home');
+    };
 }]);
+
+
 
 //Controllers
 app.controller('HomeController', [function () {
@@ -84,8 +103,8 @@ app.controller('HomeController', [function () {
 }]);
 
 // Controller for adding blogs
-app.controller('AddController', ['$location', 'BlogService', 'authentication',
-  function AddController($location, BlogService, authentication) {
+app.controller('AddController', ['$location', 'BlogService',
+  function AddController($location, BlogService) {
       var vm = this;
       vm.blog = {};
       vm.title = 'Add Blog';
@@ -104,17 +123,37 @@ app.controller('AddController', ['$location', 'BlogService', 'authentication',
 }]);
 
 // Controller for listing blogs
-app.controller('ListController', ['BlogService', 'authentication',
-function ListController(BlogService, authentication) {
-  var vm = this;
-  vm.title = 'Blog List';
+app.controller('ListController', [ '$http', '$scope', '$interval', 'authentication', 
+	function UserListController($http, $scope, $interval, authentication) {
+		var vm = this;
+		vm.pageHeader = {
+			title: 'Blog List'
+		};
 
-  BlogService.listBlogs().then(function (response) {
-      vm.blogs = response.data;
-      vm.message = "Blogs found";
-  }, function (error) {
-      vm.message = 'Error fetching blog ';
-  });
+		// Initially gets list of users								 
+		getAllUsers($http)
+		  .success(function(data) {
+			vm.users = data;
+			vm.message = "Blogs list found!";
+		  })
+		  .error(function (e) {
+			vm.message = "Could not get blog of users";
+		});
+
+		// Refreshes lists of users periodically					  
+		$scope.callAtInterval = function() {
+			console.log("Interval occurred");
+			getAllUsers($http)
+			  .success(function(data) {
+				vm.users = data;
+				vm.message = "Blogs list found!";
+			  })
+			  .error(function (e) {
+				vm.message = "Could not get blog of users";
+			});								  
+		}
+		$interval( function(){$scope.callAtInterval();}, 3000, 0, true);
+									  							  
 }]);
 
 // Controller for editing blogs
@@ -129,8 +168,8 @@ app.controller('EditController', ['$stateParams', '$location', 'BlogService',
           }, function (error) {
               vm.message = 'Error updating blog: ' + error.message;
           });
-      };
-  }
+        };
+    }
 ]);
 
 // Controller for deleting blogs
@@ -146,5 +185,41 @@ app.controller('DeleteController', ['$stateParams', '$location', 'BlogService',
               vm.message = 'Error deleting blog: ' + error.message;
           });
       };
-  }
-]);
+}]);
+
+// Controller for user login
+app.controller('LoginController', ['$http', '$state', function ($http, $state) {
+    var loginCtrl = this;
+    loginCtrl.credentials = {
+        email: '',
+        password: ''
+    };
+
+    loginCtrl.login = function() {
+        $http.post('/api/login', loginCtrl.credentials).then(function(response) {
+            sessionStorage.setItem('auth-token', response.data.token);
+            sessionStorage.setItem('user', JSON.stringify(response.data.user));
+            $state.path('/home');
+        }, function(error) {
+            loginCtrl.error = 'Login failed: ' + error.data.message;
+        });
+    };
+}]);
+
+// Controller for user registration
+app.controller('RegisterController', ['$http', '$state', function ($http, $state) {
+    var registerCtrl = this;
+    registerCtrl.user = {
+        fullName: '',
+        email: '',
+        password: ''
+    };
+
+    registerCtrl.register = function() {
+        $http.post('/api/register', registerCtrl.user).then(function(response) {
+            $state.path('/login');
+        }, function(error) {
+            registerCtrl.error = 'Registration failed: ' + error.data.message;
+        });
+    };
+}]);
