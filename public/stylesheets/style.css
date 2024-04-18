@@ -1,229 +1,197 @@
-\body {
-  background-color: #040404;
-  font-family: 'Roboto', sans-serif; /* Use Roboto as your main font */
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9fafc;
+    color: #444;
+    margin: 0;
+    padding: 0;
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  background-color: #2a323b; /* Bootstrap dark background */
-  padding: 0.5rem 0;
+a, a:hover, a:focus {
+    color: #365981; /* Dark blue color for links */
+    text-decoration: none;
 }
 
-.nav-item {
-  color: #0a0a0a;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-.nav-item:not(:last-child) {
-  border-right: 1px solid #fff;
-}
-
-.container {
-  text-align: center; 
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-h1 {
-  color: #343a40; /* Dark text for the title */
-  font-size: 2.5rem; /* Larger font size for h1 */
-  margin-bottom: 0.5rem; /* Spacing after the h1 */
-}
-
-p {
-  color: #000508; /* Grey text for the paragraph */
-  margin-bottom: 2rem; /* Spacing after the paragraph */
-}
-
-.card {
-  display: block;
-  background-color: #fff;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: none;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Bootstrap box-shadow */
-}
-
-.card-title {
-  font-size: 1.25rem; /* Title size inside cards */
-}
-
-.card-body p {
-  color: #0c0002; /* Grey text for the card paragraph */
-}
-
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #866f6f;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
-.navbar {
-  background-color: #f8f9fa;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
-.nav-link {
-  color: #555;
-  transition: color 0.3s;
-}
-
-.nav-link:hover, .nav-item.active .nav-link {
-  color: #007bff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-  margin: 20px auto;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: .5rem;
-}
-
-.input, .form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.input:focus, .form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
+/* Button Styles */
 .btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #212529;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: #007bff;
-  border: 1px solid #007bff;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+/* Primary buttons like add, comment, login, etc. */
+.btn-primary, .btn-add, .btn-login, .btn-register {
+    background-color: #875187; /* Purple color */
+    color: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
-  color: #fff;
-  background-color: #005cbf;
-  border-color: #0056b3;
+.btn-primary:hover, .btn-add:hover, .btn-login:hover, .btn-register:hover {
+    background-color: #2a456a; /* Dark blue color on hover */
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
-  margin-bottom: 1rem;
+/* Cancel and secondary buttons */
+.btn-cancel, .btn-primary-outline {
+    background-color: transparent;
+    border-radius: 20px;
+    color: #333;
+    border: none;
 }
 
-.card-body {
-  flex: 1 1 auto;
-  padding: 1.25rem;
+.btn-cancel:hover, .btn-primary-outline:hover {
+    background-color: lightgray;
 }
 
-.card-title {
-  margin-bottom: .75rem;
+/* Edit button styles */
+.btn-edit {
+    background-color: #34a4eb; /* Light blue */
+    color: white;
+    border: none;
 }
 
-.page-header {
-  margin-bottom: .75rem;
-  border-bottom: 1px solid #e2e2e2;
-  padding-bottom: .75rem;
+.btn-edit:hover {
+    background-color: #2793e6; /* Slightly darker blue on hover */
 }
 
-.title-with-line {
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 0.3rem;
-  display: inline-block;
+/* Delete button styles */
+.btn-delete {
+    background-color: #533134; /* Dark red */
+    color: white;
+    border: none;
 }
 
-.btn-add, .btn-save, .btn-danger, .btn-secondary {
-  margin-top: 1rem;
-  color: #060606;
+.btn-delete:hover {
+    background-color: #c82333; /* Brighter red on hover */
 }
 
-.btn-primary-outline {
-  background: none;
-  border: 1px solid #007bff;
-  color: #007bff;
-}
-
-.btn-primary-outline:hover {
-  background: #007bff;
-  color: #fff;
-}
-
-.form-container {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
+/* Navbar Styling */
 .navbar {
-  display: flex;
-  justify-content: center; /* This will center the menu items */
-  background-color: #e9d7e9;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #365981; /* Dark blue background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
 }
 
+.navbar-brand, .nav-link {
+    color: #A0E6D6; /* Light teal color for text */
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #EAF1E0; /* Light green on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    background-color: #365981;
+    border: none;
+    opacity: 0;
+    display: none;
+    padding: 0.5rem 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    display: block;
+}
+
+.dropdown-item {
+    color: #A0E6D6; /* Light teal */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #365981;
+    color: white;
+}
+
+/* Jumbotron for large intros */
+.jumbotron {
+    padding: 60px 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron .btn {
+    background-color: #A0E6D6; /* Light teal */
+    color: #365981; /* Dark blue */
+    border: none;
+}
+
+.jumbotron .btn:hover {
+    background-color: #365981; /* Dark blue on hover */
+    color: #A0E6D6; /* Light teal */
+}
+
+/* Utility Classes */
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #794979; 
+}
+
+/* Branding or logo area */
+.navbar-brand {
+    margin-right: 1rem; /* Spacing between logo and navigation */
+    color: #A0E6D6; /* Adjust the color as needed */
+    font-weight: bold;
+}
+
+/* Navigation links container */
 .navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row; /* This ensures the menu items are in a row */
-  align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual navigation links */
+.nav-item {
+    margin-left: 1rem; /* Spacing between links */
 }
 
 .nav-link {
-  color: #050505;
-  transition: color 0.3s;
+    color: #A0E6D6; /* Adjust the color as needed */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
 }
 
-.nav-link:hover, .nav-item.active .nav-link {
-  color: #007bff;
+.nav-link:hover {
+    color: #EAF1E0; /* Adjust the hover color as needed */
 }
+
+/* Form Box Styles */
+.form-box {
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners for the form box */
+    padding: 2rem; /* Spacing inside the form box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-top: 30px; /* Space above the form box */
+    margin-bottom: 30px; /* Space below the form box */
+  }
+  

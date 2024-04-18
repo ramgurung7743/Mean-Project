@@ -1,146 +1,152 @@
 var app = angular.module('bloggerApp');
 
-//*** Authentication Service and Methods **
-app.service('authentication', authentication);
-    authentication.$inject = ['$window', '$http'];
-    function authentication ($window, $http) {
-    
-        var saveToken = function (token) {
-            $window.localStorage['blog-token'] = token;
-        };
-                                       
-        var getToken = function () {
-            return $window.localStorage['blog-token'];
-        };
-        
-        var register = function(user) {
-            console.log('Registering user ' + user.email + ' ' + user.password);
-            return $http.post('/api/register', user).success(function(data){
-                saveToken(data.token);
-          });
-        };
-     
-        var login = function(user) {
-           console.log('Attempting to login user ' + user.email + ' ' + user.password);
-           //$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-            return $http.post('/api/login', user).success(function(data) {
-              saveToken(data.token);
-           });
-        };
-        
-        var logout = function() {
-            $window.localStorage.removeItem('blog-token');
-        };
-        
-        var isLoggedIn = function() {
-          var token = getToken();
+//Authentication service and methods
+app.service('authentication', ['$http', '$window', function($http, $window) {
+    var saveToken = function(token) {
+        $window.localStorage['blog-token'] = token;
+    };
 
-          if(token){
+    //Get token from local storage
+    var getToken = function(){
+        return $window.localStorage ['blog-token'];
+    };
+
+    //Register user
+    var register = function(user){
+        console.log('Registering User ' + user.email + ' ' + user.password);
+        return $http.post('/api/register', user).then(function(response){
+            saveToken(response.data.token);
+        });
+    }
+
+    //Login user
+    var login = function(user){
+        console.log('Logging In User ' + user.email + ' ' + user.password);
+        return $http.post('/api/login', user).then(function(response){
+            saveToken(response.data.token);
+        });
+    };
+
+    //Logout user
+    var logout = function(){
+        $window.localStorage.removeItem('blog-token');
+    };
+
+var isLoggedIn = function() {
+    var token = getToken();
+    if(token) {
+        try {
             var payload = JSON.parse($window.atob(token.split('.')[1]));
-
             return payload.exp > Date.now() / 1000;
-          } else {
+        } catch (e) {
+            console.error("Error decoding token: ", e);
             return false;
-          }
-        };
+        }
+    } else {
+        return false;
+    }
+};
 
-        var currentUser = function() {
-          if(isLoggedIn()){
+
+    //Get current user
+    var currentUser = function(){
+        if(isLoggedIn()){
             var token = getToken();
             var payload = JSON.parse($window.atob(token.split('.')[1]));
             return {
-              email : payload.email,
-              name : payload.name
+                email : payload.email,
+                name : payload.name
             };
-          }
+        }
+    };
+
+    //Return methods
+    return {
+        saveToken : saveToken,
+        getToken : getToken,
+        register : register,
+        login : login,
+        logout : logout,
+        isLoggedIn : isLoggedIn,
+        currentUser : currentUser
+    };
+}]);
+
+//login controller
+app.controller('LoginController', ['$http','$location', 'authentication', 
+    function LoginController($http, $location, authentication){
+        var vm = this;
+        vm.title = 'Login to Blogger';
+
+        //Check if user is logged in
+        vm.credentials = {
+            email : "",
+            password : ""
         };
 
-        return {
-          saveToken : saveToken,
-          getToken : getToken,
-          register : register,
-          login : login,
-          logout : logout,
-          isLoggedIn : isLoggedIn,
-          currentUser : currentUser
+        vm.returnPage = $location.search().page || '/';
+
+        //Submit form
+        vm.onSubmit = function(){
+            vm.formError = "";
+            if(!vm.credentials.email || !vm.credentials.password){
+                vm.formError = "All fields required, please try again";
+                return false;
+            } else {
+                vm.doLogin();
+            }
         };
-}
 
-app.controller('LoginController', [ '$http', '$location', 'authentication', function LoginController($htttp, $location, authentication) {
-    var vm = this;
+        //Login user
+        vm.doLogin = function(){
+            vm.formError = "";
+            authentication
+                .login(vm.credentials)
+                .then(function(){
+                    $location.search('page', null);
+                    $location.path(vm.returnPage);
+                }, function(err){
+                    vm.formError = err.data.message;
+                });
+        };
+}]);
 
-    vm.pageHeader = {
-      title: 'Sign in to Blogger'
-    };
+//Controller for registering user
+app.controller('RegisterController', ['$location', 'authentication', 
+    function RegisterController($location, authentication){
+        var vm = this;
+        vm.title = 'Register new Blogger account';
 
-    vm.credentials = {
-      email : "",
-      password : ""
-    };
+        //Check if user is logged in
+        vm.credentials = {
+            name : "",
+            email : "",
+            password : ""
+        };
 
-    vm.returnPage = $location.search().page || '/';
+        vm.returnPage = $location.search().page || '/';
+        
+        //Submit form
+        vm.onRegister = function(){
+            vm.formError = "";
+            if(!vm.credentials.name || !vm.credentials.email || !vm.credentials.password){
+                vm.formError = "All fields required, please try again";
+                return false;
+            } else {
+                vm.doRegister();
+            }
+        };
 
-    vm.onSubmit = function () {
-      vm.formError = "";
-      if (!vm.credentials.email || !vm.credentials.password) {
-           vm.formError = "All fields required, please try again";
-        return false;
-      } else {
-           vm.doLogin();
-      }
-    };
-
-    vm.doLogin = function() {
-      vm.formError = "";
-      authentication
-        .login(vm.credentials)
-        .error(function(err){
-          var obj = err;
-          vm.formError = obj.message;
-        })
-        .then(function(){
-          $location.search('page', null); 
-          $location.path(vm.returnPage);
-        });
-    };
- }]);
-
-app.controller('RegisterController', [ '$http', '$location', 'authentication', function RegisterController($htttp, $location, authentication) {
-    var vm = this;
-    
-    vm.pageHeader = {
-      title: 'Create a new Blooger account'
-    };
-    
-    vm.credentials = {
-      name : "",
-      email : "",
-      password : ""
-    };
-    
-    vm.returnPage = $location.search().page || '/';
-    
-    vm.onSubmit = function () {
-      vm.formError = "";
-      if (!vm.credentials.name || !vm.credentials.email || !vm.credentials.password) {
-        vm.formError = "All fields required, please try again";
-        return false;
-      } else {
-        vm.doRegister();
-      }
-    };
-
-    vm.doRegister = function() {
-      vm.formError = "";
-      authentication
-        .register(vm.credentials)
-        .error(function(err){
-          vm.formError = "Error registering. Try again with a different email address."
-          //vm.formError = err;
-        })
-        .then(function(){
-          $location.search('page', null); 
-          $location.path(vm.returnPage);
-        });
-    };
-}]);                    
+        //Register user
+        vm.doRegister = function(){
+            vm.formError = "";
+            authentication
+                .register(vm.credentials)
+                .then(function(){
+                    $location.search('page', null);
+                    $location.path(vm.returnPage);
+                }, function(err){
+                    vm.formError = "Error registering user, please try again with a different email address.";
+                });
+        };
+}]);
