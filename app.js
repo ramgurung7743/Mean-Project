@@ -7,20 +7,15 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 var passport = require('passport');
+const bodyParser = require('body-parser');
 
+
+
+require('./app_api/models/db');
 require('./app_api/config/passport');
 
 // Initialize the express application
 const app = express();
-
-// Connect to MongoDB
-const encodedPassword = encodeURIComponent('Yonjan@2');
-mongoose.connect(`mongodb://userRam:${encodedPassword}@localhost:27017/admin`)
-.then(() => {
-  console.log('Connected to MongoDB');
-}).catch((err) => {
-  console.error('Error connecting to MongoDB', err);
-});
 
 // Middleware setup
 app.use(logger('dev'));
@@ -34,14 +29,14 @@ app.use(express.static(path.join(__dirname, 'app_client')));
 app.use(passport.initialize());
 
 // Import routes
-const indexRouter = require('./api_app/routes/index');
-const blogApiRoutes = require('./api_app/routes/blogApiRoutes');
-const blogViewRoutes = require('./api_app/routes/blogViewRoutes');
+const indexRouter = require('./app_api/routes/index');
 
 // Use routes
 app.use('/', indexRouter);
-app.use('/api', blogApiRoutes);
-app.use('/', blogViewRoutes);
+
+// view engine setup
+app.set('views', path.join(__dirname, 'app_api', 'views'));
+app.set('view engine', 'ejs');
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
@@ -50,6 +45,15 @@ app.get('*', function(req, res) {
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+app.use((err, req, res, next) => {
+  // Log the error internally
+  logger.error(err); 
+  // Add this line to print the full error
+  console.error(err); 
+  // Return a JSON response with the error
+  res.status(err.status || 500).json({ error: err.message });
 });
 
 // Error handler

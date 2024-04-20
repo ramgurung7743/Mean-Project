@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-
 var crypto = require('crypto');
 var jwt = require('jsonwebtoken');
 
@@ -33,7 +32,7 @@ userSchema.methods.validPassword = function(password) {
 // Generate JWT
 userSchema.methods.generateJwt = function() {
     var expiry = new Date();
-    expiry.setDate(expiry.getDate() + 7);
+    expiry.setDate(expiry.getDate() + 7); // Token expiration set to 7 days
 
     return jwt.sign({
         _id: this._id,
@@ -43,4 +42,6 @@ userSchema.methods.generateJwt = function() {
     }, process.env.JWT_SECRET);
 };
 
-mongoose.model('User', userSchema);
+// Export the User model
+var User = mongoose.model('User', userSchema);
+module.exports = User;

@@ -3,7 +3,10 @@ require('dotenv').config();
 
 //Database connection
 var dbURI = process.env.DB_URL
-mongoose.connect(dbURI);
+mongoose.connect(dbURI, {
+    serverSelectionTimeoutMS: 500000  // Extend the timeout to 50 seconds
+});
+
 
 // Monitor and report when database is connected                      
 mongoose.connection.on('Connected', function () {

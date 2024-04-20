@@ -16,7 +16,6 @@
                 <li class="nav-item" ng-show="!vm.isLoggedIn()">
                     <a class="nav-link" ui-sref="login">Sign In</a>
                 </li>
-                <!-- User Account Dropdown -->
                 <li class="nav-item dropdown" ng-show="vm.isLoggedIn()">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ vm.currentUser().name }}

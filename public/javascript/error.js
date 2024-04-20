@@ -2,11 +2,11 @@
 
 /**
  * Function to display an error message.
- * @param {Object} req
- * @param {Object} res
- * @param {number} status
- * @param {string} title
- * @param {string} message 
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @param {number} status - HTTP status code.
+ * @param {string} title - Error title.
+ * @param {string} message - Error message.
  */
 const showError = function(req, res, status, title, message) {
     res.status(status);
