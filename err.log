@@ -834,3 +834,751 @@ Error: No default engine was specified and no extension was provided.
     at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
     at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
     at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:67:12)
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bitnami/Mean-App/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bitnami/Mean-App/node_modules/express/lib/application.js:587:12)
+    at ServerResponse.render (/home/bitnami/Mean-App/node_modules/express/lib/response.js:1039:7)
+    at /home/bitnami/Mean-App/app.js:96:7
+    at Layer.handle_error (/home/bitnami/Mean-App/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:326:13)
+    at /home/bitnami/Mean-App/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/bitnami/Mean-App/node_modules/express/lib/router/index.js:280:10)
+    at /home/bitnami/Mean-App/app.js:85:3
