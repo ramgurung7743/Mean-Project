@@ -1,6 +1,6 @@
 var app = angular.module('bloggerApp');
 
-//Directives for navigation
+// Directives for navigation
 app.directive('navigation', function(){
     return {
         restrict: 'EA',
@@ -10,7 +10,7 @@ app.directive('navigation', function(){
     };
 });
 
-//Controller for navigation
+// Controller for navigation
 app.controller('NavigationController', ['$location', 'authentication', 
     function NavigationController($location, authentication){
         var vm = this;
