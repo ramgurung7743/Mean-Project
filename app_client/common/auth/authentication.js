@@ -27,7 +27,7 @@ app.service('authentication', ['$http', '$window', function($http, $window) {
         });
     };
 
-    //Logout user
+    // Logout user
     var logout = function(){
         $window.localStorage.removeItem('blog-token');
     };
@@ -60,7 +60,6 @@ var isLoggedIn = function() {
         }
     };
 
-    // Return methods
     return {
         saveToken : saveToken,
         getToken : getToken,
@@ -72,7 +71,7 @@ var isLoggedIn = function() {
     };
 }]);
 
-// login controller
+// Login Controller
 app.controller('LoginController', ['$http','$location', 'authentication', 
     function LoginController($http, $location, authentication){
         var vm = this;
@@ -110,7 +109,7 @@ app.controller('LoginController', ['$http','$location', 'authentication',
         };
 }]);
 
-// Controller for registering user
+// Register Controller
 app.controller('RegisterController', ['$location', 'authentication', 
     function RegisterController($location, authentication){
         var vm = this;
