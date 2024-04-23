@@ -7,9 +7,6 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 var passport = require('passport');
-const bodyParser = require('body-parser');
-
-
 
 require('./app_api/models/db');
 require('./app_api/config/passport');
@@ -32,7 +29,8 @@ app.use(passport.initialize());
 const indexRouter = require('./app_api/routes/index');
 
 // Use routes
-app.use('/', indexRouter);
+app.use(passport.initialize());
+app.use('/api', indexRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_api', 'views'));
