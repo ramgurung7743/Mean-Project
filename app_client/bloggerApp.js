@@ -46,7 +46,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
             data: { title: 'Login' }
         })
 
-    // Default fallback for unmatched urls
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode({
@@ -55,7 +54,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     });
 }]);
 
-//Service for API calls
+// Service for API calls
 app.service('BlogService', ['$http', 'authentication', function ($http, authentication) {
     var apiBaseUrl = '/api/blogs';
 
@@ -89,14 +88,14 @@ app.service('BlogService', ['$http', 'authentication', function ($http, authenti
     };
 }]);
 
-//Controllers
+// Home Controllers
 app.controller('HomeController', [function () {
     var vm = this;
     vm.title = 'Ram Gurung Blogs Page';
     vm.message = 'This is where you will find all my Blogs! Go through my web page and play around and feel free to create a accuont with us. This will give you a ability to post and edit your own blogs, also delete them if you would like. Enjoy!';
 }]);
 
-//Controller for listing blogs
+// List Controller
 app.controller('ListController', ['BlogService', 'authentication',
     function ListController(BlogService, authentication) {
         var vm = this;
@@ -125,7 +124,7 @@ app.controller('ListController', ['BlogService', 'authentication',
         });
     }]);
 
-// Controller for adding blogs
+// Add Controller
 app.controller('AddController', ['$location', 'BlogService', 'authentication',
 function AddController($location, BlogService, authentication) {
   var vm = this;
@@ -159,7 +158,7 @@ function AddController($location, BlogService, authentication) {
 ]);
 
 
-// Controller for editing blogs
+// Edit Controller
 app.controller('EditController', ['$stateParams', '$location', 'BlogService', 'authentication',
     function EditController($stateParams, $location, BlogService, authentication) {
         var vm = this;
@@ -182,7 +181,7 @@ app.controller('EditController', ['$stateParams', '$location', 'BlogService', 'a
         };
     }]);
 
-// Controller for deleting blogs
+// Delete Controller
 app.controller('DeleteController', ['$stateParams', '$location', 'BlogService', 'authentication',
     function DeleteController($stateParams, $location, BlogService, authentication) {
         var vm = this;
