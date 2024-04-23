@@ -6,59 +6,45 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
         .state('home', {
             url: '/',
             templateUrl: '/home.html',
-            controller: 'HomeController',
-            controllerAs: 'vm',
+            controller: 'HomeController as vm',
             data: { title: 'Home' }
         })
         .state('blogList', {
             url: '/blogList',
             templateUrl: '/blogList.html',
-            controller: 'ListController',
-            controllerAs: 'vm',
+            controller: 'ListController as vm',
             data: { title: 'Blog List' }
         })
         .state('blogAdd', {
             url: '/blogAdd',
             templateUrl: '/blogAdd.html',
-            controller: 'AddController',
-            controllerAs: 'vm',
+            controller: 'AddController as vm',
             data: { title: 'Add New Blog' }
         })
         .state('blogEdit', {
             url: '/blogEdit/:blogid',
             templateUrl: '/blogEdit.html',
-            controller: 'EditController',
-            controllerAs: 'vm',
+            controller: 'EditController as vm',
             data: { title: 'Edit Blog' }
         })
         .state('blogDelete', {
             url: '/blogDelete/:blogid',
             templateUrl: '/blogDelete.html',
-            controller: 'DeleteController',
-            controllerAs: 'vm',
+            controller: 'DeleteController as vm',
             data: { title: 'Delete Blog' }
         })
         .state('register', {
             url: '/register',
             templateUrl: '/register.html',
-            controller: 'RegisterController',
-            controllerAs: 'vm',
+            controller: 'RegisterController as vm',
             data: { title: 'Register' }
         })
         .state('login', {
             url: '/login',
             templateUrl: '/login.html',
-            controller: 'LoginController',
-            controllerAs: 'vm',
+            controller: 'LoginController as vm',
             data: { title: 'Login' }
         })
-        .state('blogView', {
-            url: '/blogView/:blogid',
-            templateUrl: '/blogView.html',
-            controller: 'ViewController',
-            controllerAs: 'vm',
-            data: { title: 'View Blog' }
-        });
 
     // Default fallback for unmatched urls
     $urlRouterProvider.otherwise('/');
@@ -101,33 +87,13 @@ app.service('BlogService', ['$http', 'authentication', function ($http, authenti
     this.deleteBlog = function (blogId) {
         return $http.delete(apiBaseUrl + '/' + blogId, makeAuthHeader());
     };
-
-    this.addComment = function (blogId, comment) {
-        return $http.post(apiBaseUrl + '/' + blogId + '/comments', comment, makeAuthHeader());
-    };
-
-    this.getComments = function (blogId) {
-        return $http.get(apiBaseUrl + '/' + blogId + '/comments');
-    };
-
-    this.addReply = function (blogId, commentId, reply) {
-        return $http.post(apiBaseUrl + '/' + blogId + '/comments/' + commentId + '/replies', reply, makeAuthHeader());
-    };
-
-    this.likeComment = function (blogId, commentId) {
-        return $http.post(apiBaseUrl + '/' + blogId + '/comments/' + commentId + '/like', {}, makeAuthHeader());
-    };
-
-    this.dislikeComment = function (blogId, commentId) {
-        return $http.post(apiBaseUrl + '/' + blogId + '/comments/' + commentId + '/dislike', {}, makeAuthHeader());
-    };
 }]);
 
 //Controllers
 app.controller('HomeController', [function () {
     var vm = this;
     vm.title = 'Ram Gurung Blogs Page';
-    vm.message = 'This is where you will find my Blogs!';
+    vm.message = 'This is where you will find all my Blogs! Go through my web page and play around and feel free to create a accuont with us. This will give you a ability to post and edit your own blogs, also delete them if you would like. Enjoy!';
 }]);
 
 //Controller for listing blogs
@@ -159,154 +125,7 @@ app.controller('ListController', ['BlogService', 'authentication',
         });
     }]);
 
-// Controller for viewing a blog
-app.controller('ViewController', ['$stateParams', 'BlogService', 'authentication', function ViewController($stateParams, BlogService, authentication) {
-    var vm = this;
-    vm.blog = {};
-    vm.newCommentText = '';
-    vm.newReplyTexts = {}; 
-    vm.showButtons = false;
-
-    BlogService.getBlog($stateParams.blogid).then(function (response) {
-        vm.blog = response.data;
-    }, function (error) {
-        console.error('Error fetching blog:', error);
-    });
-
-    // Function to cancel the reply
-    vm.cancelReply = function(commentId) {
-        vm.newReplyTexts[commentId] = '';
-        var commentIndex = vm.blog.comments.findIndex(c => c._id === commentId);
-        if(commentIndex >= 0) {
-            vm.blog.comments[commentIndex].showReply = false;
-        }
-    };
-
-    vm.addComment = function () {
-        var comment = {
-            commentText: vm.newCommentText,
-            author: authentication.currentUser().name,
-            authorEmail: authentication.currentUser().email
-        };
-        BlogService.addComment($stateParams.blogid, comment).then(function (response) {
-            vm.blog.comments.push(response.data);
-            vm.newCommentText = ''; 
-            vm.showButtons = false;
-        }, function (error) {
-            console.error('Error adding comment:', error);
-        });
-    };
-
-    vm.cancelComment = function () {
-        vm.newCommentText = '';
-        vm.showButtons = false;
-    };
-
-    vm.checkBlur = function () {
-        if(!vm.newCommentText.trim()) {
-            vm.showButtons = false;
-        }
-    };
-
-    // Add a reply to a specific comment
-    vm.addReply = function (commentId) {
-        var reply = {
-            commentText: vm.newReplyTexts[commentId],
-            author: authentication.currentUser().name,
-            authorEmail: authentication.currentUser().email
-        };
-        BlogService.addReply($stateParams.blogid, commentId, reply).then(function (response) {
-            var comment = vm.blog.comments.find(c => c._id === commentId);
-            if (comment) {
-                comment.replies.push(response.data);
-            }
-            vm.newReplyTexts[commentId] = '';
-        }, function (error) {
-            console.error('Error adding reply:', error);
-        });
-    };
-
-    vm.likeComment = function (comment) {
-        var hasAlreadyLiked = vm.hasLiked(comment);
-        BlogService.likeComment($stateParams.blogid, comment._id)
-            .then(function (response) {
-                if (hasAlreadyLiked) {
-                    comment.likes--;
-                } else {
-                    comment.likes++;
-                    if (vm.hasDisliked(comment)) {
-                        comment.dislikes--;
-                    }
-                }
-                updateReactions(comment, 'like', hasAlreadyLiked);
-            })
-            .catch(function (error) {
-                console.error('Error processing like:', error);
-            });
-    };
-
-    vm.dislikeComment = function (comment) {
-        var hasAlreadyDisliked = vm.hasDisliked(comment);
-        BlogService.dislikeComment($stateParams.blogid, comment._id)
-            .then(function (response) {
-                if (hasAlreadyDisliked) {
-                    comment.dislikes--;
-                } else {
-                    comment.dislikes++;
-                    if (vm.hasLiked(comment)) {
-                        comment.likes--;
-                    }
-                }
-                updateReactions(comment, 'dislike', hasAlreadyDisliked);
-            })
-            .catch(function (error) {
-                console.error('Error processing dislike:', error);
-            });
-    };
-
-    vm.hasLiked = function (comment) {
-        var userId = authentication.currentUser()._id;
-        return comment.userReactions && comment.userReactions.some(function (reaction) {
-            return reaction.userId === userId && reaction.reaction === 'like';
-        });
-    };
-
-    vm.hasDisliked = function (comment) {
-        var userId = authentication.currentUser()._id;
-        return comment.userReactions && comment.userReactions.some(function (reaction) {
-            return reaction.userId === userId && reaction.reaction === 'dislike';
-        });
-    };
-
-    // Utility function to update the reactions array
-    function updateReactions(comment, reactionType, hasAlreadyReacted) {
-        var userId = authentication.currentUser()._id;
-        if (hasAlreadyReacted) {
-            comment.userReactions = comment.userReactions.filter(function (reaction) {
-                return reaction.userId !== userId;
-            });
-        } else {
-            var existingReaction = comment.userReactions.find(function (reaction) {
-                return reaction.userId === userId;
-            });
-            if (existingReaction) {
-                existingReaction.reaction = reactionType;
-            } else {
-                comment.userReactions.push({
-                    userId: userId,
-                    reaction: reactionType
-                });
-            }
-        }
-    }
-
-    vm.isLoggedIn = function () {
-        return authentication.isLoggedIn();
-    };
-}]);
-
 // Controller for adding blogs
-a// Controller for adding blogs
 app.controller('AddController', ['$location', 'BlogService', 'authentication',
 function AddController($location, BlogService, authentication) {
   var vm = this;
@@ -315,12 +134,10 @@ function AddController($location, BlogService, authentication) {
 
   vm.submitBlog = function () {
     var currentUser = authentication.currentUser();
-    console.log('Current user:', currentUser); // Add this to log the current user
-
+    console.log('Current user:', currentUser);
+    
     if (!currentUser) {
       console.error('No user is currently logged in.');
-      // Optionally handle the situation where no user is logged in, such as redirecting to the login page
-      // $location.path('/login');
       return;
     }
 
