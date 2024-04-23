@@ -1,17 +1,17 @@
 var app = angular.module('bloggerApp');
 
-//Authentication service and methods
+// Authentication service and methods
 app.service('authentication', ['$http', '$window', function($http, $window) {
     var saveToken = function(token) {
         $window.localStorage['blog-token'] = token;
     };
 
-    //Get token from local storage
+    // Get token from local storage
     var getToken = function(){
         return $window.localStorage ['blog-token'];
     };
 
-    //Register user
+    // Register user
     var register = function(user){
         console.log('Registering User ' + user.email + ' ' + user.password);
         return $http.post('/api/register', user).then(function(response){
@@ -19,7 +19,7 @@ app.service('authentication', ['$http', '$window', function($http, $window) {
         });
     }
 
-    //Login user
+    // Login user
     var login = function(user){
         console.log('Logging In User ' + user.email + ' ' + user.password);
         return $http.post('/api/login', user).then(function(response){
@@ -48,7 +48,7 @@ var isLoggedIn = function() {
 };
 
 
-    //Get current user
+    // Get current user
     var currentUser = function(){
         if(isLoggedIn()){
             var token = getToken();
@@ -60,7 +60,7 @@ var isLoggedIn = function() {
         }
     };
 
-    //Return methods
+    // Return methods
     return {
         saveToken : saveToken,
         getToken : getToken,
@@ -72,13 +72,12 @@ var isLoggedIn = function() {
     };
 }]);
 
-//login controller
+// login controller
 app.controller('LoginController', ['$http','$location', 'authentication', 
     function LoginController($http, $location, authentication){
         var vm = this;
         vm.title = 'Login to Blogger';
 
-        //Check if user is logged in
         vm.credentials = {
             email : "",
             password : ""
@@ -86,7 +85,7 @@ app.controller('LoginController', ['$http','$location', 'authentication',
 
         vm.returnPage = $location.search().page || '/';
 
-        //Submit form
+        // Submit form
         vm.onSubmit = function(){
             vm.formError = "";
             if(!vm.credentials.email || !vm.credentials.password){
@@ -97,7 +96,7 @@ app.controller('LoginController', ['$http','$location', 'authentication',
             }
         };
 
-        //Login user
+        // Login user
         vm.doLogin = function(){
             vm.formError = "";
             authentication
@@ -111,13 +110,12 @@ app.controller('LoginController', ['$http','$location', 'authentication',
         };
 }]);
 
-//Controller for registering user
+// Controller for registering user
 app.controller('RegisterController', ['$location', 'authentication', 
     function RegisterController($location, authentication){
         var vm = this;
         vm.title = 'Register new Blogger account';
 
-        //Check if user is logged in
         vm.credentials = {
             name : "",
             email : "",
@@ -126,7 +124,7 @@ app.controller('RegisterController', ['$location', 'authentication',
 
         vm.returnPage = $location.search().page || '/';
         
-        //Submit form
+        // Submit form
         vm.onRegister = function(){
             vm.formError = "";
             if(!vm.credentials.name || !vm.credentials.email || !vm.credentials.password){
@@ -137,7 +135,7 @@ app.controller('RegisterController', ['$location', 'authentication',
             }
         };
 
-        //Register user
+        // Register user
         vm.doRegister = function(){
             vm.formError = "";
             authentication
